@@ -18,11 +18,12 @@ Front end dev framework for InventFrame.
 
 ## Step 2) Install Jekyll (https://www.youtube.com/watch?v=iWowJBRMtpc)
 
-** gem install jekyll
-** jekyll new my-awesome-site
-** cd my-awesome-site
-** jekyll site
-** (http://localhost:4000)
+
+- gem install jekyll
+- jekyll new my-awesome-site
+- cd my-awesome-site
+- jekyll site
+- (http://localhost:4000)
 
 
 ## Documentation
