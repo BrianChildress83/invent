@@ -14,17 +14,6 @@ Front end dev framework for InventFrame.
 <!-- Documentation on how to set up and use Gulp will be created in this space.
  -->
 
-## Step 1) Setup GitHub Repo
-
-## Step 2) Install Jekyll (https://www.youtube.com/watch?v=iWowJBRMtpc)
-
-
-- gem install jekyll
-- jekyll new my-awesome-site
-- cd my-awesome-site
-- jekyll site
-- (http://localhost:4000)
-
 
 ## Documentation
 
