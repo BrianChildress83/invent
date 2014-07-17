@@ -13,7 +13,19 @@ Front end dev framework for InventFrame.
 
 <!-- Documentation on how to set up and use Gulp will be created in this space.
  -->
+## Invent
 
+UI Framework and Angular App for Invent
+
+- [Gulp instructions](#gulp)
+- [Documentation](#documentation)
+- [Technologies used](#technologies)
+- [Contributing](#contributing)
+- [Versioning](#versioning)
+
+## Gulp instructions
+
+Documentation on how to set up and use Gulp will be provided here
 
 ## Documentation
 
