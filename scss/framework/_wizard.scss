@@ -1,0 +1,126 @@
+.wizard {
+  @extend .clearfix;
+  position: relative;
+  overflow: hidden;
+  background-color: $wizard-bg;
+  border: 1px solid $border-color;
+  border-radius: $wizard-border-radius;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
+
+  ul {
+    width: em(4000);
+    padding: 0;
+    margin: 0;
+    list-style: none outside none;
+    &.previous-disabled {
+      li.complete {
+        cursor: default;
+        &:hover {
+          color: $state-success-text;
+          cursor: default;
+          background: $wizard-hover-color;
+          .chevron:before {
+            border-left-color: $wizard-hover-color;
+          }
+        }
+      }
+    }
+    li {
+      position: relative;
+      float: left;
+      height: $wizard-height;
+      padding: 0 20px 0 30px;
+      margin: 0;
+      @include rem-fallback(font-size, $font-size-base);
+      line-height: $wizard-height;
+      color: $gray;
+      cursor: default;
+      background: #ededed;
+      &.active {
+        color: $state-info-text;
+        background: $state-info-bg;
+        .chevron:before {
+          border-left: 14px solid $state-info-bg;
+        }
+        .badge {
+          background: $state-info-text;
+          color: #fff;
+        }
+      }
+      &.complete {
+        color: $state-success-text;
+        background: $state-success-bg;
+        .chevron:before {
+          border-left: 14px solid $state-success-bg;
+        }
+        .badge {
+          background: $state-success-text;
+          color: #fff;
+        }
+      }
+      &:first-child {
+        padding-left: 20px;
+        border-radius: $wizard-border-radius 0 0 $wizard-border-radius;
+      }
+      .badge {
+        margin-right: 8px;
+      }
+      .chevron {
+        position: absolute;
+        top: 0;
+        right: -14px;
+        z-index: 1;
+        display: block;
+        border: 24px solid transparent;
+        border-right: 0;
+        border-left: 14px solid $border-color;
+        &:before {
+          position: absolute;
+          top: -24px;
+          right: 1px;
+          display: block;
+          content: '';
+          border: 24px solid transparent;
+          border-right: 0;
+          border-left: 14px solid #ededed;
+        }
+      }
+    }
+  }
+
+  .actions {
+    position: absolute;
+    right: 0;
+    z-index: 1000;
+    float: right;
+    padding-right: 15px;
+    padding-left: 15px;
+    line-height: 46px;
+    vertical-align: middle;
+    background-color: #e5e5e5;
+    border-left: 1px solid $border-color;
+    a {
+      margin-right: 8px;
+      font-size: 12px;
+      line-height: 45px;
+    }
+    .btn-prev span {
+      margin-right: 5px;
+    }
+    .btn-next span {
+      margin-left: 5px;
+    }
+  }
+}
+
+.step-content {
+  .step-pane {
+    display: none;
+  }
+  .active {
+    display: block;
+    .btn-group .active {
+      display: inline-block;
+    }
+  }
+}

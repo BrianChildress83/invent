@@ -1,0 +1,133 @@
+//
+// Popovers
+// --------------------------------------------------
+
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $zindex-popover;
+  display: none;
+  max-width: $popover-max-width;
+  padding: 1px;
+  text-align: left; // Reset given new insertion method
+  background-color: $popover-bg;
+  background-clip: padding-box;
+  border: 1px solid $popover-fallback-border-color;
+  border: 1px solid $popover-border-color;
+  border-radius: $border-radius-large;
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+
+  // Overrides for proper insertion
+  white-space: normal;
+
+  // Offset the popover to account for the popover invent
+  &.top     { margin-top: -$popover-invent-width; }
+  &.right   { margin-left: $popover-invent-width; }
+  &.bottom  { margin-top: $popover-invent-width; }
+  &.left    { margin-left: -$popover-invent-width; }
+}
+
+.popover-title {
+  margin: 0; // reset heading margin
+  padding: 8px 14px;
+  font-size: $font-size-base;
+  font-weight: normal;
+  line-height: 18px;
+  background-color: $popover-title-bg;
+  border-bottom: 1px solid darken($popover-title-bg, 5%);
+  border-radius: ($border-radius-large - 1) ($border-radius-large - 1) 0 0;
+}
+
+.popover-content {
+  padding: 9px 14px;
+}
+
+// invents
+//
+// .invent is outer, .invent:after is inner
+
+.popover > .invent {
+  &,
+  &:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
+}
+.popover > .invent {
+  border-width: $popover-invent-outer-width;
+}
+.popover > .invent:after {
+  border-width: $popover-invent-width;
+  content: "";
+}
+
+.popover {
+  &.top > .invent {
+    left: 50%;
+    margin-left: -$popover-invent-outer-width;
+    border-bottom-width: 0;
+    border-top-color: $popover-invent-outer-fallback-color; // IE8 fallback
+    border-top-color: $popover-invent-outer-color;
+    bottom: -$popover-invent-outer-width;
+    &:after {
+      content: " ";
+      bottom: 1px;
+      margin-left: -$popover-invent-width;
+      border-bottom-width: 0;
+      border-top-color: $popover-invent-color;
+    }
+  }
+  &.right > .invent {
+    top: 50%;
+    left: -$popover-invent-outer-width;
+    margin-top: -$popover-invent-outer-width;
+    border-left-width: 0;
+    border-right-color: $popover-invent-outer-fallback-color; // IE8 fallback
+    border-right-color: $popover-invent-outer-color;
+    &:after {
+      content: " ";
+      left: 1px;
+      bottom: -$popover-invent-width;
+      border-left-width: 0;
+      border-right-color: $popover-invent-color;
+    }
+  }
+  &.bottom > .invent {
+    left: 50%;
+    margin-left: -$popover-invent-outer-width;
+    border-top-width: 0;
+    border-bottom-color: $popover-invent-outer-fallback-color; // IE8 fallback
+    border-bottom-color: $popover-invent-outer-color;
+    top: -$popover-invent-outer-width;
+    &:after {
+      content: " ";
+      top: 1px;
+      margin-left: -$popover-invent-width;
+      border-top-width: 0;
+      border-bottom-color: $popover-invent-color;
+    }
+  }
+
+  &.left > .invent {
+    top: 50%;
+    right: -$popover-invent-outer-width;
+    margin-top: -$popover-invent-outer-width;
+    border-right-width: 0;
+    border-left-color: $popover-invent-outer-fallback-color; // IE8 fallback
+    border-left-color: $popover-invent-outer-color;
+    &:after {
+      content: " ";
+      right: 1px;
+      border-right-width: 0;
+      border-left-color: $popover-invent-color;
+      bottom: -$popover-invent-width;
+    }
+  }
+
+}

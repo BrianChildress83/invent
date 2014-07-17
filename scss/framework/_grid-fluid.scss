@@ -1,0 +1,43 @@
+// Grid system -- Fluid version (default)
+// Generate only the parts you need; comment out the parts you don't
+// --------------------------------------------------
+
+// Extra small grid
+@include create-grid(xs);
+
+// Small grid
+@media (min-width: $breakpoint-sm) {
+  @include create-grid(sm);
+}
+
+// Medium grid
+@media (min-width: $breakpoint-md) {
+  @include create-grid(md);
+}
+
+// Large grid
+@media (min-width: $breakpoint-lg) {
+  @include create-grid(lg);
+}
+
+// Extra large grid
+@media (min-width: $breakpoint-xl) {
+  @include create-grid(xl);
+}
+
+// Have the .container-fluid option available for those who are use the pre-complied franework version 
+.container-fluid {
+  @extend .clearfix;
+  @include create-container();
+  .container-fluid {
+    width: auto !important;
+  }
+}
+
+// Cap containers at max-width
+@media screen and (min-width: ($site-max-width + $grid-gutter-width)) {
+  .container,
+  .container-fluid {
+    width: $site-max-width;
+  }
+}

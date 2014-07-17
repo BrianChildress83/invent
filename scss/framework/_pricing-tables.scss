@@ -1,0 +1,45 @@
+//
+// Pricing tables -- from Foundation
+// --------------------------------------------------
+
+.pricing-table {
+  margin-left: 0;
+  margin-bottom: $line-height-computed;
+  border: solid 1px $border-color;
+  border-radius: $border-radius-base;
+  * {
+    line-height: 1;
+    text-align: center;
+    color: inherit;
+    font-weight: $font-weight-light;
+  }
+  .title {
+    background-color: $border-color;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    font-weight: $headings-font-weight;
+    @include rem-fallback(font-size, ($base-font-size * 1.1));
+  }
+  .price {
+    background-color: #eee;
+    padding: $padding-base-horizontal;
+    @include rem-fallback(font-size,($base-font-size * 1.125));
+  }
+  .description {
+    background-color: #fff;
+    padding: $padding-base-horizontal;
+    color: lighten($text-color, 35%);
+    @include rem-fallback(font-size, ($base-font-size * .75));
+    line-height: 1.4;
+    border-bottom: dotted 1px $border-color; 
+  }
+  .bullet-item {
+    background-color: #fff;
+    padding: $padding-base-vertical;
+    @include rem-fallback(font-size, ($base-font-size * .75));
+    border-bottom: dotted 1px $border-color;
+  }
+  .cta-btn {
+    background-color: $gray-lightest;
+    padding: $padding-base-horizontal;
+  }
+}

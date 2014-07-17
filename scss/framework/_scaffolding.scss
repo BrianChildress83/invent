@@ -1,0 +1,152 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+// Reset the box-sizing
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+// Base settings 
+// -------------
+
+html {
+  font-size: $base-font-size;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-text-size-adjust: 100%; // Prevents iOS text size adjust after orientation change, without disabling user zoom. (nm v3.0.1)
+  -ms-text-size-adjust: 100%; // Prevents iOS text size adjust after orientation change, without disabling user zoom. (nm v3.0.1)
+}
+
+// Body reset
+// -----------
+
+body {
+  position: relative;
+  margin: 0; // removes default margin (nm v3.0.1)
+  font-family: $font-family-base;
+  @include rem-fallback(font-size, $font-size-base);
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $body-bg;
+}
+
+// Links
+
+a {
+  background: transparent; // Remove the gray background color from active links in IE 10. (nm v3.0.1)
+  color: $link-color;
+  text-decoration: none;
+  
+  &:active,
+  &:hover {
+    outline: 0; // Improve readability when focused and also mouse hovered in all browsers. (nm v3.0.1)
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+  // Focus State (nm v3.0.1)
+  &:focus {
+    @include tab-focus();
+  }
+}
+
+// Images
+// -----------
+
+img {
+  border: 0; // Remove border when inside `a` element in IE 8/9/10. (nm v3.0.1)
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+  //images responsive by default:
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+object,
+embed {
+  max-width: 100%;
+  height: auto; 
+}
+
+// No max class to fix other embeds and other elements
+.no-max {
+  max-width: none !important;
+}
+
+// Rounded corners
+.img-rounded {
+  border-radius: $border-radius-large;
+}
+
+// Image thumbnails
+//
+// Heads up! This is mixin-ed into thumbnails.less for `.thumbnail`.
+.img-thumbnail {
+  display: inline-block;
+  padding: $thumbnail-padding;
+  line-height: $line-height-base;
+  background-color: $thumbnail-bg;
+  border: 1px solid $thumbnail-border;
+  border-radius: $thumbnail-border-radius;
+  transition: all .2s ease-in-out;
+}
+
+// Perfect circle
+.img-circle {
+  border-radius: 50%; // set radius in percents
+}
+
+// Figure reset
+figure {
+  margin: 0; // Addresses margin not present in IE 8/9 and Safari 5. (nm v3.0.1)
+}
+
+
+// Horizontal rules
+// ------------------
+
+hr {
+  height: 0; // Address differences between Firefox and other browsers. (nm v3.0.1)
+  margin-top:    $line-height-computed;
+  margin-bottom: $line-height-computed;
+  border: 0;
+  border-top: 1px solid $hr-border;
+}
+
+// Only display content to screen readers
+// See: http://a11yproject.com/posts/how-to-hide-content/
+// ---------------------------------------------------------
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+  // Use in conjunction with .sr-only to only display content when it's focused.
+  // Useful for "Skip to main content" links; see 
+  // http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+  // Credit: HTML5 Boilerplate
+  &.focusable {
+    &:active,
+    &:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      clip: auto;
+    }
+  }
+}

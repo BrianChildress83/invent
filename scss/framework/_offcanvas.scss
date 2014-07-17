@@ -1,0 +1,53 @@
+//
+// Off canvas navigation
+// --------------------------------------------------
+
+.offcanvas {
+  display: none;
+  &.in {
+    display: block;
+  }
+}
+
+@media (max-width: $breakpoint-xs-max) {
+  .offcanvas-xs {
+    @extend .offcanvas;
+  }
+}
+@media (max-width: $breakpoint-sm-max) {
+  .offcanvas-sm {
+    @extend .offcanvas;
+  }
+}
+@media (max-width: $breakpoint-md-max) {
+  .offcanvas-md {
+    @extend .offcanvas;
+  }
+}
+@media (max-width: $breakpoint-lg-max) {
+  .offcanvas-lg {
+    @extend .offcanvas;
+  }
+}
+.offcanvas-xl {
+    @extend .offcanvas;
+}
+
+.canvas-sliding {
+  transition: top 0.35s, left 0.35s, bottom 0.35s, right 0.35s;
+}
+
+.offcanvas-clone {
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: absolute !important;
+  top: auto !important;
+  left: auto !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  opacity: 0 !important;
+}

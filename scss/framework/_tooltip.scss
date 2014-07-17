@@ -1,0 +1,95 @@
+//
+// Tooltips
+// --------------------------------------------------
+
+
+// Base class
+.tooltip {
+  position: absolute;
+  z-index: $zindex-tooltip;
+  display: block;
+  visibility: visible;
+  font-size: $font-size-small;
+  line-height: 1.4;
+  opacity: 0;
+
+  &.in     { opacity: $tooltip-opacity; }
+  &.top    { margin-top:  (em(3) * -1); padding: $tooltip-invent-width 0; }
+  &.right  { margin-left:  em(3); padding: 0 $tooltip-invent-width; }
+  &.bottom { margin-top:   em(3); padding: $tooltip-invent-width 0; }
+  &.left   { margin-left: (em(3) * -1); padding: 0 $tooltip-invent-width; }
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  max-width: $tooltip-max-width;
+  padding: em(3) em(8);
+  color: $tooltip-color;
+  text-align: center;
+  text-decoration: none;
+  background-color: $tooltip-bg;
+  border-radius: $border-radius-base;
+}
+
+// invents
+.tooltip-invent {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip {
+  &.top .tooltip-invent {
+    bottom: 0;
+    left: 50%;
+    margin-left: -$tooltip-invent-width;
+    border-width: $tooltip-invent-width $tooltip-invent-width 0;
+    border-top-color: $tooltip-invent-color;
+  }
+  &.top-left .tooltip-invent {
+    bottom: 0;
+    left: $tooltip-invent-width;
+    border-width: $tooltip-invent-width $tooltip-invent-width 0;
+    border-top-color: $tooltip-invent-color;
+  }
+  &.top-right .tooltip-invent {
+    bottom: 0;
+    right: $tooltip-invent-width;
+    border-width: $tooltip-invent-width $tooltip-invent-width 0;
+    border-top-color: $tooltip-invent-color;
+  }
+  &.right .tooltip-invent {
+    top: 50%;
+    left: 0;
+    margin-top: -$tooltip-invent-width;
+    border-width: $tooltip-invent-width $tooltip-invent-width $tooltip-invent-width 0;
+    border-right-color: $tooltip-invent-color;
+  }
+  &.left .tooltip-invent {
+    top: 50%;
+    right: 0;
+    margin-top: -$tooltip-invent-width;
+    border-width: $tooltip-invent-width 0 $tooltip-invent-width $tooltip-invent-width;
+    border-left-color: $tooltip-invent-color;
+  }
+  &.bottom .tooltip-invent {
+    top: 0;
+    left: 50%;
+    margin-left: -$tooltip-invent-width;
+    border-width: 0 $tooltip-invent-width $tooltip-invent-width;
+    border-bottom-color: $tooltip-invent-color;
+  }
+  &.bottom-left .tooltip-invent {
+    top: 0;
+    left: $tooltip-invent-width;
+    border-width: 0 $tooltip-invent-width $tooltip-invent-width;
+    border-bottom-color: $tooltip-invent-color;
+  }
+  &.bottom-right .tooltip-invent {
+    top: 0;
+    right: $tooltip-invent-width;
+    border-width: 0 $tooltip-invent-width $tooltip-invent-width;
+    border-bottom-color: $tooltip-invent-color;
+  }
+}

@@ -1,0 +1,122 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// Core variables and mixins
+// --------------------------------------
+@import "vendor/bourbon/bourbon",
+        "prop/invent-styles",
+        "prop/variables",
+        "framework/mixins";
+
+// Reset
+// --------------------------------------
+@import "framework/reset",
+        "framework/print",
+        "prop/fonts";
+
+// Core CSS
+// --------------------------------------
+@import "framework/scaffolding";
+@import "framework/type-base"; //* heading classes?
+@import "framework/typography"; //*
+@import "framework/type-rare"; //*
+
+// Utilties
+// --------------------------------------
+@import "framework/utilities",
+        "framework/component-animations";
+
+// Grid
+// --------------------------------------
+@import "framework/grid-base";
+
+// Fluid grid
+@import "framework/grid-fluid"; // Fluid grid :: Comment out static grid file to use this  //*
+//@import "framework/grid-visibility"; // Hides and shows elements based on width  mixins!!!!
+//@import "framework/grid-stops"; // Comment out to have no stopping points in fluid layout  //*
+
+// Static grid
+//@import "framework/grid-static"; // Comment out grid-fluid files to use this
+
+
+// Grid alternatives
+// --------------------------------------
+
+// Stock Bootstrap:
+//@import "framework/grid-bootstrap";  //*
+//@import "framework/responsive-utilities";  //*
+
+// Foundation's block grid:
+//@import "framework/grid-block";
+
+
+// Base UI
+// --------------------------------------
+@import "framework/code",
+        "framework/tables",
+        "framework/tables-responsive";
+
+// Components
+// --------------------------------------
+
+// Input
+@import "framework/forms"; //* varient issues
+@import "framework/buttons"; //* may be issue with radius mixin
+@import "framework/button-groups"; //*
+@import "framework/input-groups";  //* column issues
+@import "framework/close"; //*
+// switches from foundation of effeckt.css
+// range slider from foundation????
+
+// Navigation
+@import "framework/dropdowns"; //*
+@import "framework/navs"; //*
+@import "framework/navbar"; //* reset documentation to native
+@import "framework/subnav"; //*
+@import "framework/sidenav"; //*
+@import "framework/breadcrumbs"; //*
+@import "framework/pagination"; //*
+@import "framework/pager"; //*
+@import "framework/wizard"; //*
+
+// Display
+@import "framework/labels"; //*
+@import "framework/badges"; //* kill variants in docs
+@import "framework/callouts"; //*
+@import "framework/jumbotron"; //*
+@import "framework/list-group"; //* variant issues
+@import "framework/panels"; //*
+@import "framework/pricing-tables"; //*
+@import "framework/progress-bars"; //*
+@import "framework/wells"; //*
+// preloader
+
+// Media
+@import "framework/media"; //*
+@import "framework/thumbnails"; //*
+@import "framework/flex-video"; //*
+@import "framework/responsive-embed"; //*
+
+// Components :: Javascript
+// --------------------------------------
+@import "framework/alerts"; //*
+@import "framework/carousel"; //*
+@import "framework/file-input"; //*
+@import "framework/modals"; //*
+@import "framework/offcanvas"; //*
+@import "framework/tooltip"; //*
+@import "framework/popovers"; //*
+// sticky nav
+// lightbox
+// form validation
+// image optimization
+
+// Application classes
+// --------------------------------------
+@import "prop/application"; //*
+
+// Vendor classes
+// --------------------------------------
+@import "vendor/glyphicons";
+//@import "vendor/font-awesome/font-awesome"; //*
+// animate.css or something similar

@@ -1,0 +1,29 @@
+// Subnav
+// Taken from Foundation
+// -------------------------
+.sub-nav {
+  overflow: hidden;
+  margin: (em(4) * -1) 0 ($line-height-computed / 2) (em(9) * -1);
+  padding-top: em(4);
+  li {
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 0.5625em;
+    font-size: $font-size-small;
+    a {
+      color: $disabled-color;
+      text-decoration: none;
+      &:hover {
+        color:$gray-dark;
+      }
+    }
+    &.active a {
+      border-radius: $border-radius-base;
+      font-weight: 700;
+      background: $brand-primary;
+      padding: em(3) em(9);
+      cursor: default;
+      color: #fff;
+    }
+  }
+}

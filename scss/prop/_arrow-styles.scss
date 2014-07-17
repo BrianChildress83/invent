@@ -1,0 +1,85 @@
+// Base values
+$base-font-size: 100% !default;
+$base-line-height: 160% !default;
+
+// We use this to control font-smoothing
+$font-smoothing: antialiased !default;
+
+// Logo colors & dimensions
+// --------------------------
+
+$logo-primary-color:       #000 !default;
+$logo-reverse-color:       #FFF !default;
+$logo-min-height:          .625em !default;
+
+// Font families -- chance to redo?
+// ---------------------------------
+
+$invent-font-family-base:         "Helvetica Neue", Arial, sans-serif !default;
+$invent-font-family-bold:         "TheinhardtBold", Arial, sans-serif !default;
+$invent-font-family-light:        "TheinhardtThin", Arial, sans-serif !default;
+$invent-font-family-light-small:  "TheinhardtLight", Arial, sans-serif !default;
+
+// Color palette
+// --------------------------
+
+$invent-red:                 #e31b23 !default; // top 5
+$invent-orange:              #f68a33 !default;
+$invent-gold:                #fdbb30 !default; // top 5
+$invent-yellow:              #ffe512 !default;
+$invent-light-green:         #c1d82f !default;
+$invent-green:               #54b948 !default; // top 5
+$invent-light-blue:          #72cdf4 !default;
+$invent-blue:                #009ddc !default; // top 5
+$invent-dark-blue:           #00539b !default;
+$invent-violet:              #92278f !default; // top 5
+$invent-pink:                #e70082 !default;
+
+// Brand offering colors
+$invent-brand-aerospace:     $invent-red !default;
+$invent-brand-bi:            $invent-orange !default;
+$invent-brand-intel-sys:     $invent-gold !default;
+$invent-brand-lighting:      $invent-yellow !default;
+$invent-brand-data-center:   $invent-light-green !default;
+$invent-brand-power-mgmt:    $invent-green !default;
+$invent-brand-value-reco:    $invent-light-blue !default;
+$invent-brand-cloud:         $invent-blue !default;
+$invent-brand-corporate:     $invent-dark-blue !default;
+$invent-brand-mobility:      $invent-violet !default;
+
+// Innovators colors
+$invent-metallic-gold:       #a8996e !default;
+$invent-process-gold:        #c2a204 !default;
+
+
+
+@mixin rem-fallback($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-units(nth($values, $i));
+    $pxValues: #{$pxValues + $value*16}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  } 
+
+  @for $i from 1 through $max {
+    $value: strip-units(nth($values, $i));
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  } 
+  
+  #{$property}: $pxValues; 
+  #{$property}: $remValues; 
+}
+
+
+
+

@@ -1,0 +1,90 @@
+// Centered container element
+// ------------------------------------------
+// Head's up! Make sure maximum width is set later in a media query.
+// IE8 box model will break if min- and max- widths are set on this element.
+@mixin create-container($class-name: container) {
+  position: relative;
+  padding: 0 ($grid-gutter-width / 2);
+  margin-right: auto;
+  margin-left: auto;
+  // Fix for nested containers
+  .#{$class-name} {
+    width: auto !important;
+  }
+}
+
+// Create a row
+// ------------------------------------------
+@mixin create-rows($gutter: $grid-gutter-width) {
+  position: relative;
+  width: auto;
+  margin-left:  ($gutter / -2);
+  margin-right: ($gutter / -2);
+}
+
+@mixin calc-grid($index, $class, $type) {
+  @if ($type == width) and ($index > 0) {
+    .#{$class}-#{$index} {
+      width: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == push) and ($index > 0) {
+    .#{$class}-push-#{$index} {
+      left: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == push) and ($index == 0) {
+    .#{$class}-push-0 {
+      left: auto;
+    }
+  }
+  @if ($type == pull) and ($index > 0) {
+    .#{$class}-pull-#{$index} {
+      right: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == pull) and ($index == 0) {
+    .#{$class}-pull-0 {
+      right: auto;
+    }
+  }
+  @if ($type == offset) {
+    .#{$class}-offset-#{$index} {
+      margin-left: percentage(($index / $grid-columns));
+    }
+  }
+}
+
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+@mixin loop-grid($columns, $class, $type) {
+  @for $i from 0 through $columns {
+    @include calc-grid($i, $class, $type);
+  }
+}
+
+// Create grid for specific class
+@mixin create-grid($class) {
+  @include loop-grid($grid-columns, $class, width);
+  @include loop-grid($grid-columns, $class, pull);
+  @include loop-grid($grid-columns, $class, push);
+  @include loop-grid($grid-columns, $class, offset);
+}
+
+// Create grid for specific class
+@mixin create-static-grid($columns) {
+  @extend .col;
+  @for $i from 0 through $columns {
+    .col-#{$i} {
+      width: percentage(($i / $grid-columns));
+    }
+    .push-#{$i} {
+      left: percentage(($i / $grid-columns));
+    }
+    .pull-#{$i} {
+      right: percentage(($i / $grid-columns));
+    }
+    .offset-#{$i} {
+      margin-left: percentage(($i / $grid-columns));
+    }
+  }
+}

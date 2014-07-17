@@ -1,0 +1,56 @@
+//
+// Type - Rare
+// Rare tags that are not normally used but may require support
+// -------------------------------------------------------------------
+
+// Prevents sub and sup affecting line-height in all browsers (nm v3.0.1)
+// ----------------------------------------------------------------------
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+mark,
+.mark {
+  background: $state-warning-bg; // Address styling not present in IE 8/9. (nm v3.0.1)
+  padding: .2em;
+}
+
+// Abbreviations and acronyms
+// -------------------------
+
+abbr[title], // Address styling not present in IE 8/9/10/11, Safari, and Chrome. (nm v3.0.1)
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted $abbr-border-color; // (nm v3.0.1))
+}
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+// Addresses
+// -------------------------
+address {
+  margin-bottom: $line-height-computed;
+  font-style: normal;
+  line-height: $line-height-base;
+}
+
+// Emphasis & misc
+// -------------------------
+b              { font-weight: bold; } // Address style set to `bolder` in Firefox 4+, Safari, and Chrome. (nm v3.0.1)
+dfn            { font-style: italic; } // Address styling not present in Safari and Chrome. (nm v3.0.1)
+cite           { font-style: normal; } // Undo browser default styling.  (nm v3.0.1)
+samp {
+  font-family: $font-family-monospace; // Font family set oddly in Safari 5 and Chrome. (nm v3.0.1)
+  font-size: 1em;  // Address odd `em`-unit font size rendering in all browsers. (nm v3.0.1)
+}

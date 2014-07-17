@@ -1,0 +1,23 @@
+// Grid system -- Static version
+// Still requires grid-base.less to work
+// --------------------------------------------------
+
+
+// Make container fixed
+.container {
+  width: $site-static-width;
+}
+
+// Zero offsets
+.push-0 {
+  left: auto;
+}
+.pull-0 {
+  right: auto;
+}
+.offset-0 {
+  margin-left: 0;
+}
+
+// Build the full grid
+@include create-static-grid($grid-columns);

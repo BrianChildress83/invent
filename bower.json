@@ -1,0 +1,26 @@
+{
+  "name": "invent-framework",
+  "description": "",
+  "version": "0.0.1",
+  "keywords": [
+    "css",
+    "js",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "homepage": "",
+  "main": [
+  ],
+  "ignore": [
+    ".*",
+    "_config.yml",
+    "docs",
+  ],
+  "dependencies": {
+    "jquery": ">= 1.9.0"
+  }
+}
