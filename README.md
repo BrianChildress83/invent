@@ -1,4 +1,5 @@
 # Invent Framework (invent frame)
+========
 
 UI Framework and Angular App for Invent
 
@@ -9,9 +10,10 @@ UI Framework and Angular App for Invent
 - [Versioning](#versioning)
 
 ## Gulp instructions
+========
 
-- Below is an example GULP tutorial
-- This tutorial can be found at: https://laracasts.com/lessons/gulp-this
+> Below is an example GULP tutorial
+> This tutorial can be found at: https://laracasts.com/lessons/gulp-this
 
 
    * Gulp works
@@ -236,10 +238,12 @@ gulp.task('default', ['watch']);
 }
 
 ## Documentation
+========
 
 <!--This framwork's documentation, included in this repo in the root directory, is built with [Jekyll](http://jekyllrb.com).-->
 
 ### Running documentation locally
+========
 
 <!-- 1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation) (requires v2.1.x).
   - **Windows users:** Read [this unofficial guide](https://github.com/juthilo/run-jekyll-on-windows/) to get Jekyll up and running without problems. We use Pygments for syntax highlighting, so make sure to read the sections on installing Python and Pygments.
@@ -250,8 +254,9 @@ Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com
  -->
 
 ## Technologies used
+========
 
-This will document all the third-party code we use. So far, this includes:
+> This will document all the third-party code we use. So far, this includes:
 
 - Bootstrap SASS version (currently version 3.2)
 - Foundation (CSS/JS framework -- using only select elements from this)
@@ -263,28 +268,18 @@ This will document all the third-party code we use. So far, this includes:
 - FontAwesome (Icon font library)
 
 ## Contributing
-<!-- 
-Please read through our [contributing guidelines](https://github.com/michaelbowlin/invent-framework/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
-
-Editor preferences are available in the [editor config](https://github.com/michaelbowlin/invent-framework/.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
- -->
-
-## Versioning
-
-<!-- For transparency into our release cycle and in striving to maintain backward compatibility, this framework is maintained under [the Semantic Versioning guidelines](http://semver.org/). -->
-
-
-Blockquotes
 ========
 
-> Email-style angle brackets
-> are used for blockquotes.
+> Please read through our [contributing guidelines](https://github.com/michaelbowlin/invent/blob/v0.1.0/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
 
-> > And, they can be nested.
+> Editor preferences are available in the [editor config](https://github.com/michaelbowlin/invent/v0.1.0/.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
 
-> #### Headers in blockquotes
-> 
-> * You can quote a list.
-> * Etc.
+
+## Versioning
+========
+
+> For transparency into our release cycle and in striving to maintain backward compatibility, this framework is maintained under [thcde Semantic Versioning guidelines](http://semver.org/). 
+
+
 
 
