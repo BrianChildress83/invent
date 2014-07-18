@@ -42,7 +42,7 @@ Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com
  -->
 
 ## Technologies used
-<!-- 
+
 This will document all the third-party code we use. So far, this includes:
 
 - Bootstrap SASS version (currently version 3.2)
@@ -53,7 +53,6 @@ This will document all the third-party code we use. So far, this includes:
 - Respond.js (IE8 support) 
 - FastClick (JS lib that eliminates delay on click for mobile devices)
 - FontAwesome (Icon font library)
- -->
 
 ## Contributing
 <!-- 
