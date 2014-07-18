@@ -1,4 +1,4 @@
-# Invent Framework (Invent framework)
+# Invent Framework (Invent framework for RWD PhoneGapp App)
 ========
 
 UI Framework and Angular App for Invent
