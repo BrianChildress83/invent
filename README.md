@@ -275,6 +275,17 @@ Editor preferences are available in the [editor config](https://github.com/micha
 <!-- For transparency into our release cycle and in striving to maintain backward compatibility, this framework is maintained under [the Semantic Versioning guidelines](http://semver.org/). -->
 
 
+Blockquotes
+========
 
+> Email-style angle brackets
+> are used for blockquotes.
+
+> > And, they can be nested.
+
+> #### Headers in blockquotes
+> 
+> * You can quote a list.
+> * Etc.
 
 
