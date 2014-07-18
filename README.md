@@ -1,4 +1,4 @@
-# Invent Framework (invent framework)
+# Invent Framework (Invent framework)
 ========
 
 UI Framework and Angular App for Invent
