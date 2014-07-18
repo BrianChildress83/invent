@@ -10,11 +10,8 @@ UI Framework and Angular App for Invent
 
 ## Gulp instructions
 
-Documentation on how to set up and use Gulp will be provided here
-
-## Documentation
-
-   * TUT: https://laracasts.com/lessons/gulp-this
+- Below is an example GULP tutorial
+- This tutorial can be found at: https://laracasts.com/lessons/gulp-this
 
 
    * Gulp works
@@ -40,9 +37,6 @@ Documentation on how to set up and use Gulp will be provided here
                   * :x (to exit)
 
 
-
-
-
    * install gulp and save it to your dev dependencies
 
       * sudo npm install gulp —save-dev
@@ -57,8 +51,6 @@ Documentation on how to set up and use Gulp will be provided here
     "gulp": "^3.6.1"
   }
 }
-
-
 
    * Install plugins
 
@@ -243,8 +235,9 @@ gulp.task('default', ['watch']);
   }
 }
 
+## Documentation
 
-This framwork's documentation, included in this repo in the root directory, is built with [Jekyll](http://jekyllrb.com).
+<!--This framwork's documentation, included in this repo in the root directory, is built with [Jekyll](http://jekyllrb.com).-->
 
 ### Running documentation locally
 
