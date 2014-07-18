@@ -1,14 +1,14 @@
 {
-  "name": "michaelbowlin/invent-framework",
-  "description": "Front end dev framework for invent Electronics.",
-  "keywords": ["invent", "css", "framework"],
-  "homepage": "https://github.com/michaelbowlin/invent-framework",
+  "name": "michaelbowlin/invent",
+  "description": "Front end dev framework for Invent App.",
+  "keywords": ["invent", "css", "framework", "app"],
+  "homepage": "https://github.com/michaelbowlin/invent",
   "authors": [
     {
       "name": "Michael Bowlin"
     },
     {
-      "name": "Jonathan Boho"
+      "name": "Brian Childress"
     }
   ],
   "support": {
