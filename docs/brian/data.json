@@ -1,0 +1,24 @@
+{
+  "name": "Nymph",
+  "zebra": {
+    "id": {
+      "type": "number",
+      "description": "Product identifier",
+      "required": true
+    },
+    "name": {
+      "description": "Zebra is a fly",
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "number",
+      "minimum": 0,
+      "required": true
+    },
+    "img": {
+      "url": "http://www.orvis.com/orvis_assets/thumbnails/1X94W2black.jpg"
+
+    }
+  }
+}
